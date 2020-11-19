@@ -449,9 +449,9 @@ By default the stack is assumed to grow in the *negative* direction, meaning tha
 | --------------------------- | ----------------- |
 | *\<register> or \<varnode>* | One *varnode* tag |
 
-This tag describes how the return address is stored, upon entry to a function. It takes a single varnode sub-tag describing the storage location (See [the section called “Varnode Tags”](index.html#varnode_tag)). In many cases, the decompiler can eliminate return value data-flow without knowing this information because the value is never used within the function and other parameter passing is explicitly laid out. Sometimes however, return values can look like part of a structure allocated on the stack or can be confused with other data-flow. In these cases, the `<returnaddress>` tag can help by making the standard storage location explicit.
+This tag describes how the return address is stored, upon entry to a function. It takes a single varnode sub-tag describing the storage location (See the section called “Varnode Tags”). In many cases, the decompiler can eliminate return value data-flow without knowing this information because the value is never used within the function and other parameter passing is explicitly laid out. Sometimes however, return values can look like part of a structure allocated on the stack or can be confused with other data-flow. In these cases, the `<returnaddress>` tag can help by making the standard storage location explicit.
 
-The storage location of the return address is actually a property of a prototype model. This tag defines a global default for all prototype models, but it can be overridden for individual prototype models. See [the section called “”](cspec_parampass.html#proto_returnaddress).
+The storage location of the return address is actually a property of a prototype model. This tag defines a global default for all prototype models, but it can be overridden for individual prototype models. See the section called “\<returnaddress>”.
 
 ##### Example 14.
 
@@ -538,9 +538,9 @@ The *type* attribute can be used to associate one of Ghidra's *generic calling c
 
 #### 6.3.1 \<input>
 
-The `<input>` tag lists the resources used to pass input parameters to a function with this prototype. The varnodes used for passing are selected by an *allocation strategy* (See [the section called “Describing Parameters and Allocation Strategies”](cspec_parampass.html#strategy)) from among the resources specified here. The `<input>` tag contains a list of `<pentry>` sub-tags describing the varnodes. Depending on the allocation strategy, the ordering is typically important.
+The `<input>` tag lists the resources used to pass input parameters to a function with this prototype. The varnodes used for passing are selected by an *allocation strategy* (See the section called “Describing Parameters and Allocation Strategies” )from among the resources specified here. The `<input>` tag contains a list of `<pentry>` sub-tags describing the varnodes. Depending on the allocation strategy, the ordering is typically important.
 
-The *killedbycall* attribute if true indicates that all storage locations listed in the `<input>` should be considered as killed by call (See [the section called “”](cspec_parampass.html#killedbycall)). This attribute is optional and defaults to false.
+The *killedbycall* attribute if true indicates that all storage locations listed in the `<input>` should be considered as killed by call (See the section called "\<killedbycall>"). This attribute is optional and defaults to false.
 
 The *pointermax* attribute can be used if there is an absolute limit on the size of datatypes passed directly using the standard resources. If present and non-zero, the attribute indicates the largest number of bytes for a parameter. Bigger inputs are assumed to have a pointer passed instead. When a user specifies a function prototype with a big parameter, Ghidra will automatically allocate a storage location that holds the pointer. By default, this substitution does not occur, and large parameters go through the normal resource allocation process and are assigned storage that holds the whole value directly.
 
@@ -636,7 +636,7 @@ The `align` attribute indicates that multiple variables can be drawn from the `p
 | ------------------------- | ----------------- |
 | \<register> or \<varnode> | One *varnode* tag |
 
-This is an optional tag that describes where the *return address* is stored, upon entering a function. If present, it overrides the default value for functions that use this particular prototype model. (See [the section called “”](cspec_specialreg.html#return_address)) It takes a single **varnode tag** describing the storage location.
+This is an optional tag that describes where the *return address* is stored, upon entering a function. If present, it overrides the default value for functions that use this particular prototype model. (See the section called “\<returnaddress>“) It takes a single **varnode tag** describing the storage location.
 
 ##### Example 18.
 
