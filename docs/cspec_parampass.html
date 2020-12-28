@@ -1,6 +1,6 @@
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Parameter Passing</title>
 <link rel="stylesheet" type="text/css" href="Frontpage.css">
 <meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
@@ -14,9 +14,9 @@
 <tr><th colspan="3" align="center">Parameter Passing</th></tr>
 <tr>
 <td width="20%" align="left">
-<a accesskey="p" href="cspec_specialreg.html">Prev</a> </td>
-<th width="60%" align="center"> </th>
-<td width="20%" align="right"> </td>
+<a accesskey="p" href="cspec_specialreg.html">Prev</a>ï¿½</td>
+<th width="60%" align="center">ï¿½</th>
+<td width="20%" align="right">ï¿½</td>
 </tr>
 </table>
 <hr>
@@ -340,7 +340,7 @@ floating-point registers. If there are more parameters of either type, the compi
 the stack.
 </p>
 <div class="example">
-<a name="idm525355270480"></a><p class="title"><b>Example 15. </b></p>
+<a name="idm525355270480"></a><p class="title"><b>Exampleï¿½15.ï¿½</b></p>
 <div class="example-contents"><pre class="programlisting">
   &lt;input&gt;
     &lt;pentry minsize="1" maxsize="8" metatype="float"&gt;
@@ -390,7 +390,7 @@ tag occurs the earliest in the list becomes the formal return value for the func
 If an output varnode matches no <code class="code">&lt;pentry&gt;</code>, then it is rejected as a formal return value.
 </p>
 <div class="example">
-<a name="idm525355262992"></a><p class="title"><b>Example 16. </b></p>
+<a name="idm525355262992"></a><p class="title"><b>Exampleï¿½16.ï¿½</b></p>
 <div class="example-contents"><pre class="programlisting">
   &lt;output killedbycall="true"&gt;
     &lt;pentry minsize="4" maxsize="10" metatype="float" extension="float"&gt;
@@ -525,7 +525,7 @@ up to 500 bytes of parameters from the stack, which are 4 byte aligned, starting
 of 16 bytes from the initial value of the stack pointer.
 </p>
 <div class="example">
-<a name="idm525355220416"></a><p class="title"><b>Example 17. </b></p>
+<a name="idm525355220416"></a><p class="title"><b>Exampleï¿½17.ï¿½</b></p>
 <div class="example-contents"><pre class="programlisting">
   &lt;pentry minsize="1" maxsize="500" align="4"&gt;
     &lt;addr space="stack" offset="16"/&gt;
@@ -564,7 +564,7 @@ prototype model. (See <a class="xref" href="cspec_specialreg.html#return_address
 <span class="bold"><strong>varnode tag</strong></span> describing the storage location.
 </p>
 <div class="example">
-<a name="idm525355208096"></a><p class="title"><b>Example 18. </b></p>
+<a name="idm525355208096"></a><p class="title"><b>Exampleï¿½18.ï¿½</b></p>
 <div class="example-contents"><pre class="programlisting">
   &lt;returnaddress&gt;
     &lt;register name="RA" /&gt;
@@ -609,7 +609,7 @@ because it is generally looking at a single function in isolation, the decompile
 information to safely allow this kind of propagation.
 </p>
 <div class="example">
-<a name="idm525355195792"></a><p class="title"><b>Example 19. </b></p>
+<a name="idm525355195792"></a><p class="title"><b>Exampleï¿½19.ï¿½</b></p>
 <div class="example-contents"><pre class="programlisting">
   &lt;unaffected&gt;
     &lt;register name="ESP"/&gt;
@@ -659,7 +659,7 @@ the storage location represents the same high-level variable before and after, b
 modify the value.
 </p>
 <div class="example">
-<a name="idm525355181040"></a><p class="title"><b>Example 20. </b></p>
+<a name="idm525355181040"></a><p class="title"><b>Exampleï¿½20.ï¿½</b></p>
 <div class="example-contents"><pre class="programlisting">
   &lt;killedbycall&gt;
     &lt;register name="ECX"/&gt;
@@ -703,7 +703,7 @@ If there is movement and no other explicit manipulation of the input value in a 
 tagged this way, the decompiler will treat the movement as dead code.
 </p>
 <div class="example">
-<a name="idm525355169136"></a><p class="title"><b>Example 21. </b></p>
+<a name="idm525355169136"></a><p class="title"><b>Exampleï¿½21.ï¿½</b></p>
 <div class="example-contents"><pre class="programlisting">
   &lt;likelytrash&gt;
     &lt;register name="ECX"/&gt;
@@ -772,7 +772,7 @@ to be added to the default. The <code class="code">&lt;localrange&gt;</code> tag
 so it needs to specify the default range if it wants to keep it.
 </p>
 <div class="example">
-<a name="idm525355150976"></a><p class="title"><b>Example 22. </b></p>
+<a name="idm525355150976"></a><p class="title"><b>Exampleï¿½22.ï¿½</b></p>
 <div class="example-contents"><pre class="programlisting">
   &lt;localrange&gt;
     &lt;range space="stack" first="0xfffffffffff0bdc1" last="0xffffffffffffffff"/&gt;
@@ -789,14 +789,14 @@ so it needs to specify the default range if it wants to keep it.
 <table width="100%" summary="Navigation footer">
 <tr>
 <td width="40%" align="left">
-<a accesskey="p" href="cspec_specialreg.html">Prev</a> </td>
-<td width="20%" align="center"> </td>
-<td width="40%" align="right"> </td>
+<a accesskey="p" href="cspec_specialreg.html">Prev</a>ï¿½</td>
+<td width="20%" align="center">ï¿½</td>
+<td width="40%" align="right">ï¿½</td>
 </tr>
 <tr>
-<td width="40%" align="left" valign="top">Compiler Special Purpose Registers </td>
+<td width="40%" align="left" valign="top">Compiler Special Purpose Registersï¿½</td>
 <td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
-<td width="40%" align="right" valign="top"> </td>
+<td width="40%" align="right" valign="top">ï¿½</td>
 </tr>
 </table>
 </div>
